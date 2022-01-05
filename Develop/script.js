@@ -24,15 +24,15 @@ var length = parseInt(
 if (Number.isNaN (length)) {
   window.alert("Please put amount in numbers");
  
-  return '';
+  return null;
 }
 if (length < 8){
   window.alert("Password length must be atleast 8 characters long");
-  return '';
+  return null;
 }
 if (length > 128) {
   window.alert("Password lenght must be less than 128 characters")
-  return '';
+  return null;
 }
 
 // ask if add symbols in password
@@ -52,7 +52,7 @@ if (
   addUpperCase === false
 ) {
   window.alert("You must select atleast one type.");
-  return '';
+  return null;
 }
 var passwordOptions = {
   length: length,
@@ -64,7 +64,7 @@ var passwordOptions = {
 return passwordOptions;
 }
 
-function getRandom(array){
+function getRandom(array) {
   var randomIndex = Math.floor(Math.random() * array.length);
   var randomElement = array[randomIndex];
   return randomElement;
@@ -80,13 +80,13 @@ if (options.addSpecialSymb) {
   possibleChar = possibleChar.concat(specialSymb);
   guaranteedChar.push(getRandom(specialSymb));
 }
-if (options.addNumberChar) {
-  possibleChar = possibleChar.concat(numberChar);
+if (options.addNumbersChar) {
+  possibleChar = possibleChar.concat(numbersChar);
   guaranteedChar.push(getRandom(numbersChar));
 }
 if (options.addLowerChar) {
-  possibleChar = possibleChar.concat(lowerChar);
-  guaranteedChar.push(getRandom(lowerChar));
+  possibleChar = possibleChar.concat(lowerCase);
+  guaranteedChar.push(getRandom(lowerCase));
 }
 if (options.addUpperCase) {
   possibleChar = possibleChar.concat(upperCase);
