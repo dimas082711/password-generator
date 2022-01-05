@@ -84,7 +84,7 @@ if (options.addNumbersChar) {
   possibleChar = possibleChar.concat(numbersChar);
   guaranteedChar.push(getRandom(numbersChar));
 }
-if (options.addLowerChar) {
+if (options.addLowerCase) {
   possibleChar = possibleChar.concat(lowerCase);
   guaranteedChar.push(getRandom(lowerCase));
 }
