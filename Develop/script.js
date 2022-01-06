@@ -19,7 +19,7 @@ var upperCase = [
 function passOptions(){
 // ask length of pass in numbers
 var length = parseInt(
-  window.prompt("What will be your password length?")
+  window.prompt("What will be your password length? Password must be between 8-128 characters.")
 );
 if (Number.isNaN (length)) {
   window.alert("Please put amount in numbers");
@@ -49,7 +49,7 @@ if (
   addSpecialSymb === false &&
   addNumbersChar === false &&
   addLowerCase === false &&
-  addUpperCase === false
+ addUpperCase === false
 ) {
   window.alert("You must select atleast one type.");
   return null;
@@ -72,7 +72,7 @@ function getRandom(array) {
 // generate password function
 function generatePassword() {
   var options = passOptions();
-  var result = []
+  var result = [];
   var possibleChar = [];
   var guaranteedChar = [];
 if (!options) return null;
@@ -93,8 +93,8 @@ if (options.addUpperCase) {
   guaranteedChar.push(getRandom(upperCase));
 }
 for (var i = 0; i < options.length; i++) {
-  var possibleChar = getRandom(possibleChar);
-  result.push(possibleChar);
+  var anyChar = getRandom(possibleChar);
+  result.push(anyChar);
 }
 for (var i = 0; i < guaranteedChar.length; i++) {
   result[i] = guaranteedChar[i];
