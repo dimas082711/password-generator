@@ -5,6 +5,6 @@
 
 ## website url [click here](https://dimas082711.github.io/password-generator/)
 
-## ![Password Generator Image](https://imgur.com/eCsLgHX)
+## ![Password Generator Image](https://imgur.com/a/G8fRUzS)
 
 ## Made with javascript
